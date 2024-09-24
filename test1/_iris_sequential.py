@@ -12,7 +12,7 @@ np.random.shuffle(y_train)
 tf.random.set_seed(116)
 
 model = tf.keras.models.Sequential([
-    tf.keras.layers.Dense(3, activation='softmax', kernel_regularizer=tf.keras.regularizers.l2())
+    tf.keras.layers.Dense(3, activation='softmax', kernel_regularizer=tf.keras.regularizers.l1())
 ])
 
 model.compile(optimizer=tf.keras.optimizers.SGD(lr=0.1),
